@@ -4,3 +4,5 @@ query:
 keyed_groups:
   - key: os
     prefix: os
+compose:
+  ansible_host: fqdn
