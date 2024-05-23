@@ -8,5 +8,7 @@ keyed_groups:
     prefix: os
   - key: location
     prefix: location
+  - key: environment
+    prefix: env
 #compose:
 #  ansible_host: fqdn
