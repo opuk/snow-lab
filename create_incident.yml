@@ -5,9 +5,18 @@
       servicenow.itsm.incident:
         state: new
         caller: ansible
-        short_description: User is not receiving email
-        description: User has been unable to receive email for the past 15 minutes, created from Ansible
+        short_description: "A short incident description created by ansible {{ now() }}"
+        description: |
+          created from Ansible {{ now(fmt='%Y-%m-%d %H:%M:%S') }}
+          more information
         #attachments:
         #  - path: ./create_incident.yml
         impact: low
         urgency: low
+      register: incident
+
+    - name: Show incident details
+      ansible.builtin.debug:
+        var: incident
+        verbosity: 1
+

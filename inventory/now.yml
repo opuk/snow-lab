@@ -5,10 +5,13 @@ query:
   - os: = Linux Red Hat
 keyed_groups:
   - key: os
-    prefix: os
+    #prefix: os
+    separator: ""
   - key: location
-    prefix: location
+    separator: ""
+    #prefix: location
   - key: environment
-    prefix: env
-#compose:
-#  ansible_host: fqdn
+    separator: ""
+    #prefix: env
+compose:
+  ansible_host: fqdn
