@@ -1,4 +1,5 @@
 plugin: servicenow.itsm.now
+enhanced: true
 query:
   - os: = Linux Red Hat
 keyed_groups:
