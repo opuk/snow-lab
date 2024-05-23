@@ -27,6 +27,7 @@
         other:
           os: "Linux Red Hat"
           os_version: "9.4"
+          fqdn: "{{ item.name }}"
       loop: "{{ data }}"
       loop_control:
         label: "{{ item.name }}"
@@ -42,3 +43,4 @@
         other:
           os: "Windows"
           os_version: "2022"
+          fqdn: "dc01.example.com"
