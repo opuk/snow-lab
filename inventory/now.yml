@@ -5,10 +5,10 @@ query:
   - os: = Linux Red Hat
 keyed_groups:
   - key: os
-    prefix: 
+    prefix: os
   - key: location
-    prefix:
+    prefix: location
   - key: environment
-    prefix:
+    prefix: env
 #compose:
 #  ansible_host: fqdn
