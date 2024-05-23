@@ -4,4 +4,3 @@ query:
 keyed_groups:
   - key: os
     prefix: os
-
