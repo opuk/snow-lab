@@ -14,9 +14,8 @@
         short_description: web server
         serial_number: 1236
         environment: test
-
   tasks:
-    - name: Create a configuration item
+    - name: Create sample Linux servers
       servicenow.itsm.configuration_item:
         name: "{{ item.name }}"
         short_description: "{{ item.short_description }}"
@@ -31,3 +30,15 @@
       loop: "{{ data }}"
       loop_control:
         label: "{{ item.name }}"
+
+    - name: Create a sample domain controller
+      servicenow.itsm.configuration_item:
+        name: "dc01.example.com"
+        short_description: "example domain controller"
+        sys_class_name: cmdb_ci_server
+        assigned_to: ansible
+        environment: "production"
+        category: Hardware
+        other:
+          os: "Windows"
+          os_version: "2022"
