@@ -1,0 +1,33 @@
+- hosts: localhost
+  gather_facts: false
+  vars:
+    data:
+      - name: web01.example.com
+        short_description: web server
+        serial_number: 1234
+        environment: production
+      - name: web02.example.com
+        short_description: web server
+        serial_number: 1235
+        environment: production
+      - name: web03.example.com
+        short_description: web server
+        serial_number: 1236
+        environment: test
+
+  tasks:
+    - name: Create a configuration item
+      servicenow.itsm.configuration_item:
+        name: "{{ item.name }}"
+        short_description: "{{ item.short_description }}"
+        serial_number: "{{ item.serial_number }}"
+        sys_class_name: cmdb_ci_server
+        assigned_to: ansible
+        environment: "{{ item.environment }}"
+        category: Hardware
+        other:
+          os: "Linux Red Hat"
+          os_version: "9.4"
+      loop: "{{ data }}"
+      loop_control:
+        label: "{{ item.name }}"

@@ -1,0 +1,13 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Create incident
+      servicenow.itsm.incident:
+        state: new
+        caller: ansible
+        short_description: User is not receiving email
+        description: User has been unable to receive email for the past 15 minutes, created from Ansible
+        #attachments:
+        #  - path: ./create_incident.yml
+        impact: low
+        urgency: low
