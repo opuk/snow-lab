@@ -1,9 +1,12 @@
 plugin: servicenow.itsm.now
-enhanced: true
+enhanced: false
+strict: true
 query:
   - os: = Linux Red Hat
 keyed_groups:
   - key: os
     prefix: os
-compose:
-  ansible_host: fqdn
+  - key: location
+    prefix: location
+#compose:
+#  ansible_host: fqdn
