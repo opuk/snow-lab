@@ -30,6 +30,13 @@ groups:
     u_business_identifier == "73" and
     os in ("Linux Red Hat", "RHEL")
 
+  virtual_rhel_servers: >-
+    virtual == "true" and
+    os in ("Linux Red Hat", "RHEL")
+
+  non_virtual_rhel_servers: >-
+    virtual == "false" and
+    os in ("Linux Red Hat", "RHEL")
 keyed_groups:
 #  - key: classification
 #    separator: ""
