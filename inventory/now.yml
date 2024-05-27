@@ -37,25 +37,7 @@ keyed_groups:
   - key: environment
     separator: ""
     prefix: "env_"
-    
 
 compose:
   ansible_host: fqdn
 
-#plugin: servicenow.itsm.now
-#enhanced: false
-#strict: false
-#query:
-#  - os: = Linux Red Hat
-#keyed_groups:
-#  - key: os
-#    #prefix: os
-#    separator: ""
-#  - key: location
-#    separator: ""
-#    #prefix: location
-#  - key: environment
-#    separator: ""
-#    #prefix: env
-#compose:
-#  ansible_host: fqdn
