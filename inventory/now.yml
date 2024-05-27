@@ -25,7 +25,7 @@ groups:
     os in ("Linux Red Hat", "RHEL")
 
   custom_rhel_servers: >-
-    u_business_identifier == 9962 and
+    u_business_identifier == "73" and
     os in ("Linux Red Hat", "RHEL")
 compose:
   ansible_host: fqdn
