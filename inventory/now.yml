@@ -35,7 +35,6 @@ keyed_groups:
 #    separator: ""
 #    prefix: "c_"
   - key: environment
-    separator: "SEP"
     prefix: "environment_"
 
 compose:
