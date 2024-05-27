@@ -14,11 +14,11 @@ columns:
 groups:
   all_rhel_servers: os in ("Linux Red Hat", "RHEL")
   test_rhel_servers: >-
-    environment == "Test" and
+    environment == "Test" or classification == "Test" and
     os in ("Linux Red Hat", "RHEL")
 
   prod_rhel_servers: >-
-    environment == "Production" and
+    environment == "Production" or classification == "Production" and
     os in ("Linux Red Hat", "RHEL")
 
   emea_rhel_servers: >-
