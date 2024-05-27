@@ -1,17 +1,41 @@
 plugin: servicenow.itsm.now
-enhanced: false
-strict: false
-query:
-  - os: = Linux Red Hat
-keyed_groups:
-  - key: os
-    #prefix: os
-    separator: ""
-  - key: location
-    separator: ""
-    #prefix: location
-  - key: environment
-    separator: ""
-    #prefix: env
+columns:
+  - fqdn
+  - host_name
+  - ip_address
+  - name
+  - os
+  - environment
+  - location
+groups:
+  test_rhel_servers: >-
+    environment == "Test" and
+    os in ("Linux Red Hat", "RHEL")
+
+  prod_rhel_servers: >-
+    environment == "Production" and
+    os in ("Linux Red Hat", "RHEL")
+
+  emea_rhel_servers: >-
+    location == "Emea" and
+    os in ("Linux Red Hat", "RHEL")
 compose:
   ansible_host: fqdn
+
+#plugin: servicenow.itsm.now
+#enhanced: false
+#strict: false
+#query:
+#  - os: = Linux Red Hat
+#keyed_groups:
+#  - key: os
+#    #prefix: os
+#    separator: ""
+#  - key: location
+#    separator: ""
+#    #prefix: location
+#  - key: environment
+#    separator: ""
+#    #prefix: env
+#compose:
+#  ansible_host: fqdn

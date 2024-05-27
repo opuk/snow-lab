@@ -21,13 +21,14 @@
         short_description: "{{ item.short_description }}"
         serial_number: "{{ item.serial_number }}"
         sys_class_name: cmdb_ci_server
-        assigned_to: ansible
+        #assigned_to: ansible
         environment: "{{ item.environment }}"
         category: Hardware
         other:
           os: "Linux Red Hat"
           os_version: "9.4"
           fqdn: "{{ item.name }}"
+          location: "Emea"
       loop: "{{ data }}"
       loop_control:
         label: "{{ item.name }}"
@@ -37,7 +38,7 @@
         name: "dc01.example.com"
         short_description: "example domain controller"
         sys_class_name: cmdb_ci_server
-        assigned_to: ansible
+        #assigned_to: ansible
         environment: "production"
         category: Hardware
         other:
