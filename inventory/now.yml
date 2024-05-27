@@ -33,8 +33,10 @@ groups:
 keyed_groups:
   - key: classifier
     separator: ""
+    prefix: "c_"
   - key: environment
     separator: ""
+    prefix: "env_"
     
 
 compose:
