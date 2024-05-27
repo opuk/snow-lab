@@ -4,7 +4,6 @@
     - name: Create incident
       servicenow.itsm.incident:
         state: new
-        caller: ansible
         short_description: "A short incident description created by ansible {{ now() }}"
         description: |
           created from Ansible {{ now(fmt='%Y-%m-%d %H:%M:%S') }}
