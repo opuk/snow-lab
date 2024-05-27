@@ -35,7 +35,7 @@ keyed_groups:
 #    separator: ""
 #    prefix: "c_"
   - key: environment
-    prefix: "environment_"
+    prefix: "environment"
 
 compose:
   ansible_host: fqdn
