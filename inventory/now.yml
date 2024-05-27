@@ -31,7 +31,7 @@ groups:
     os in ("Linux Red Hat", "RHEL")
 
 keyed_groups:
-  - key: classifier
+  - key: classification
     separator: ""
     prefix: "c_"
   - key: environment
