@@ -37,12 +37,12 @@ groups:
   non_virtual_rhel_servers: >-
     virtual == "false" and
     os in ("Linux Red Hat", "RHEL")
-keyed_groups:
+#keyed_groups:
 #  - key: classification
 #    separator: ""
 #    prefix: "c_"
-  - key: environment
-    prefix: "environment"
+#  - key: environment
+#    prefix: "environment"
 
 compose:
   ansible_host: fqdn
