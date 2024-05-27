@@ -31,12 +31,12 @@ groups:
     os in ("Linux Red Hat", "RHEL")
 
 keyed_groups:
-  - key: classification
-    separator: ""
-    prefix: "c_"
+#  - key: classification
+#    separator: ""
+#    prefix: "c_"
   - key: environment
-    separator: ""
-    prefix: "env_"
+    separator: "SEP"
+    prefix: "environment_"
 
 compose:
   ansible_host: fqdn

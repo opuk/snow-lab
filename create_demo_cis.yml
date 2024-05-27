@@ -31,6 +31,7 @@
           location: "Emea"
           u_business_identifier: 73
           u_business_thing: "the thing important to the business"
+          virtual: "true"
       loop: "{{ data }}"
       loop_control:
         label: "{{ item.name }}"
