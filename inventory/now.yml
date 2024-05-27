@@ -12,6 +12,7 @@ columns:
   - u_business_identifier
   - u_business_thing
 groups:
+  all_rhel_servers: os in ("Linux Red Hat", "RHEL")
   test_rhel_servers: >-
     environment == "Test" and
     os in ("Linux Red Hat", "RHEL")
