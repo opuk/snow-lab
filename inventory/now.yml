@@ -9,6 +9,8 @@ columns:
   - os
   - environment
   - location
+  - u_business_identifier
+  - u_business_thing
 groups:
   test_rhel_servers: >-
     environment == "Test" and
@@ -20,6 +22,10 @@ groups:
 
   emea_rhel_servers: >-
     location == "Emea" and
+    os in ("Linux Red Hat", "RHEL")
+
+  custom_rhel_servers: >-
+    u_business_identifier == 9962 and
     os in ("Linux Red Hat", "RHEL")
 compose:
   ansible_host: fqdn
