@@ -1,4 +1,6 @@
 plugin: servicenow.itsm.now
+query:
+  - os: = Linux Red Hat
 columns:
   - fqdn
   - host_name
