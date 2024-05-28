@@ -20,7 +20,7 @@ groups:
     os in ("Linux Red Hat", "RHEL")
 
   prod_rhel_servers: >-
-    environment == "Production" or classification == "Production" and
+    environment == "Production" and
     os in ("Linux Red Hat", "RHEL")
 
   emea_rhel_servers: >-
