@@ -47,5 +47,5 @@ groups:
 
 compose:
   ansible_host: fqdn
-  json_data: u_json_data | from_json
+  json_data: u_json_data | to_dict
 
