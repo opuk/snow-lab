@@ -47,4 +47,5 @@ groups:
 
 compose:
   ansible_host: fqdn
+  json_data: "{{ u_json_data | to_yaml }}"
 
