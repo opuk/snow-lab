@@ -10,6 +10,7 @@ columns:
   - environment
   # - classification
   - location
+  - u_json_data
   # - u_business_identifier
   # - u_business_thing
 groups:
