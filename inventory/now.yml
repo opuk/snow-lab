@@ -8,7 +8,7 @@ columns:
   - name
   - os
   - environment
-  - classification
+  # - classification
   - location
   # - u_business_identifier
   # - u_business_thing
