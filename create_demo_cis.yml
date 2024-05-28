@@ -6,6 +6,7 @@
         short_description: web server
         serial_number: 1234
         environment: production
+        virtual: false
       - name: web02.example.com
         short_description: web server
         serial_number: 1235
@@ -24,10 +25,10 @@
         name: "{{ item.name }}"
         short_description: "{{ item.short_description }}"
         serial_number: "{{ item.serial_number }}"
-        sys_class_name: cmdb_ci_server
+        sys_class_name: cmdb_ci_linux_server 
         #assigned_to: ansible
         environment: "{{ item.environment }}"
-        category: Hardware
+        #category: Hardware
         other:
           os: "Linux Red Hat"
           os_version: "9.4"
@@ -35,7 +36,7 @@
           location: "Emea"
           u_business_identifier: 73
           u_business_thing: "the thing important to the business"
-          virtual: "true"
+          virtual: "{{ item.virtual | default(true) }}"
       loop: "{{ data }}"
       loop_control:
         label: "{{ item.name }}"
