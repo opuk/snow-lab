@@ -14,8 +14,6 @@ columns:
   - sys_tags
   - used_for
 groups:
-  all_rhel_servers: os in ("Linux Red Hat", "RHEL")
-
   test_rhel_servers: >-
     environment == "Test" and
     os in ("Linux Red Hat", "RHEL")
@@ -42,4 +40,7 @@ groups:
 
 compose:
   ansible_host: fqdn
+  is_cool: u_is_cool | bool
+  business_thing: u_business_thing
+  business_identifier: u_business_identifier
 
