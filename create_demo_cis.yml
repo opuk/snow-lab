@@ -14,6 +14,10 @@
         short_description: web server
         serial_number: 1236
         environment: test
+      - name: web04.example.com
+        short_description: web server
+        serial_number: "{{ 99999 | random }}"
+        environment: test
   tasks:
     - name: Create sample Linux servers
       servicenow.itsm.configuration_item:
@@ -48,3 +52,5 @@
           os: "Windows"
           os_version: "2022"
           fqdn: "dc01.example.com"
+          u_business_identifier: 7
+          u_business_thing: "hmm"
