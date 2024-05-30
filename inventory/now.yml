@@ -10,6 +10,7 @@ columns:
   - os
   - environment
   - location
+  - operational_status
 groups:
   all_rhel_servers: os in ("Linux Red Hat", "RHEL")
 
