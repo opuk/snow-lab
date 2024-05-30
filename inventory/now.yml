@@ -11,6 +11,8 @@ columns:
   - environment
   - location
   - operational_status
+  - sys_tags
+  - used_for
 groups:
   all_rhel_servers: os in ("Linux Red Hat", "RHEL")
 
