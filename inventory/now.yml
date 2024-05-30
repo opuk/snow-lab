@@ -1,5 +1,4 @@
 plugin: servicenow.itsm.now
-# table: cmdb_ci_linux_server
 query:
   - os: = Linux Red Hat
     operational_status: = 1
