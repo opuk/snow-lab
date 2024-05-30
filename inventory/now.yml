@@ -2,6 +2,7 @@ plugin: servicenow.itsm.now
 # table: cmdb_ci_linux_server
 query:
   - os: = Linux Red Hat
+    operational_status: = 1
 columns:
   - fqdn
   - host_name
@@ -15,14 +16,6 @@ columns:
   - used_for
 groups:
   all_rhel_servers: os in ("Linux Red Hat", "RHEL")
-
-  operational_rhel_servers: >-
-    operational_status == "Operational" and
-    os in ("Linux Red Hat", "RHEL")
-
-  non_operational_rhel_servers: >-
-    operational_status != "Operational" and
-    os in ("Linux Red Hat", "RHEL")
 
   test_rhel_servers: >-
     environment == "Test" and
