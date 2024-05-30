@@ -17,8 +17,12 @@ groups:
     operational_status == "Operational" and
     os in ("Linux Red Hat", "RHEL")
 
+  non_operational_rhel_servers: >-
+    operational_status != "Operational" and
+    os in ("Linux Red Hat", "RHEL")
+
   test_rhel_servers: >-
-    environment == "Test" or classification == "Test" and
+    environment == "Test" and
     os in ("Linux Red Hat", "RHEL")
 
   prod_rhel_servers: >-
