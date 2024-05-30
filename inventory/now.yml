@@ -3,7 +3,7 @@ table: cmdb_ci_linux_server
 query:
   - os: = Linux Red Hat
 columns:
-  - fqdn  # test yo
+  - fqdn
   - host_name
   - ip_address
   - name
