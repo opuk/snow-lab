@@ -1,0 +1,21 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - servicenow.itsm.configuration_item_info:
+        sys_class_name: cmdb_ci_server
+        query:
+          # - os: = Linux Red Hat
+          - category: = Hardware
+        return_fields:
+          - name
+          - sys_id
+      register: result
+    - debug:
+        var: result
+        verbosity: 1
+    - servicenow.itsm.configuration_item:
+        sys_id: "{{ item.sys_id }}"
+        state: absent
+      loop: "{{ result.records }}"
+      loop_control:
+        label: "{{ item.name }}"
