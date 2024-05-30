@@ -3,9 +3,9 @@
   tasks:
     - servicenow.itsm.configuration_item_info:
         sys_class_name: cmdb_ci_server
-        query:
-          # - os: = Linux Red Hat
-          - category: = Hardware
+ #       query:
+ #         - os: = Linux Red Hat
+ #         - category: = Hardware
         return_fields:
           - name
           - sys_id
@@ -13,6 +13,7 @@
     - debug:
         var: result
         verbosity: 1
+    - pause:
     - servicenow.itsm.configuration_item:
         sys_id: "{{ item.sys_id }}"
         state: absent
