@@ -3,16 +3,13 @@ table: cmdb_ci_linux_server
 query:
   - os: = Linux Red Hat
 columns:
-  - fqdn
+  - fqdn  # test yo
   - host_name
   - ip_address
   - name
   - os
   - environment
-  # - classification
   - location
-  # - u_business_identifier
-  # - u_business_thing
 groups:
   all_rhel_servers: os in ("Linux Red Hat", "RHEL")
   test_rhel_servers: >-
@@ -38,12 +35,6 @@ groups:
   non_virtual_rhel_servers: >-
     virtual == "false" and
     os in ("Linux Red Hat", "RHEL")
-#keyed_groups:
-#  - key: classification
-#    separator: ""
-#    prefix: "c_"
-#  - key: environment
-#    prefix: "environment"
 
 compose:
   ansible_host: fqdn
