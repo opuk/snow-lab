@@ -5,7 +5,7 @@
       servicenow.itsm.configuration_item:
         name: "server{{ item }}.example.com"
         short_description: "a server"
-        serial_number: "{{ 9999999 | random }}"
+        serial_number: "3422{{ item }}"
         sys_class_name: cmdb_ci_linux_server 
         environment: "Development"
         #category: Hardware
