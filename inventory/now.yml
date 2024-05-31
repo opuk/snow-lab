@@ -10,9 +10,8 @@ columns:
   - os
   - environment
   - location
-  - operational_status
-  - sys_tags
   - used_for
+  - classification
 groups:
   test_rhel_servers: >-
     environment == "Test" and
