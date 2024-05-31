@@ -1,0 +1,21 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Create sample Linux servers
+      servicenow.itsm.configuration_item:
+        name: "server{{ item }}.example.com"
+        short_description: "a server"
+        serial_number: "{{ 9999999 | random }}"
+        sys_class_name: cmdb_ci_linux_server 
+        environment: "Development"
+        #category: Hardware
+        other:
+          os: "Linux Red Hat"
+          os_version: "9.4"
+          fqdn: "server{{ item }}.example.com"
+          location: "Emea"
+          u_business_identifier: 73
+          u_business_thing: "the thing important to the business"
+          virtual: "{{ item.virtual | default(true) }}"
+      loop: "{{ range(100) }}"
+
