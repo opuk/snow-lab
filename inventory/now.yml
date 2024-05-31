@@ -17,6 +17,10 @@ groups:
     environment == "Test" and
     os in ("Linux Red Hat", "RHEL")
 
+  dev_rhel_servers: >-
+    environment == "Development" and
+    os in ("Linux Red Hat", "RHEL")
+
   prod_rhel_servers: >-
     environment == "Production" and
     os in ("Linux Red Hat", "RHEL")
