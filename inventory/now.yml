@@ -12,6 +12,7 @@ columns:
   - location
   - used_for
   - classification
+  - u_business_identifier
 groups:
   test_rhel_servers: >-
     environment == "Test" and
