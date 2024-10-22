@@ -25,7 +25,7 @@
         name: "{{ item.name }}"
         short_description: "{{ item.short_description }}"
         serial_number: "{{ item.serial_number }}"
-        sys_class_name: cmdb_ci_linux_server 
+        sys_class_name: cmdb_ci_linux_server
         #assigned_to: ansible
         environment: "{{ item.environment }}"
         #category: Hardware

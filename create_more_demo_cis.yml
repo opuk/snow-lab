@@ -6,7 +6,7 @@
         name: "server{{ item }}.example.com"
         short_description: "a server"
         serial_number: "3422{{ item }}"
-        sys_class_name: cmdb_ci_linux_server 
+        sys_class_name: cmdb_ci_linux_server
         environment: "Development"
         #category: Hardware
         other:
@@ -18,4 +18,3 @@
           u_business_thing: "the thing important to the business"
           virtual: "{{ item.virtual | default(true) }}"
       loop: "{{ range(10000) }}"
-
